@@ -1,3 +1,16 @@
-.navbar {
-  background-color: aqua;
+.navbar{
+  padding: 15px;
+  background-color: #4EC6B6;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  text-decoration: none;
+  color: #fff;
+  
+  .logo{
+    display: block;
+    width: 180px;
+    height: 40px;
+    margin: auto;
+  }
 }
