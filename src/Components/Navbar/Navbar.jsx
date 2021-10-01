@@ -3,10 +3,8 @@ import './Navbar.scss'
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="navbar">
-        <div className="logo">Bank Name</div>
-      </div>
+    <div className="navbar">
+      <div className="logo">Bank Name</div>
     </div>
   )
 }
