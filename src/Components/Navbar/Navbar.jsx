@@ -1,12 +1,14 @@
-import React from "react"
-import "./Navbar.scss";
+import React from 'react'
+import './Navbar.scss'
 
 const Navbar = () => {
-  return <div>
-    <div class="navbar">
-        <div class="logo">Bank Name</div>
+  return (
+    <div>
+      <div className="navbar">
+        <div className="logo">Bank Name</div>
+      </div>
     </div>
-  </div>
+  )
 }
 
 export default Navbar
