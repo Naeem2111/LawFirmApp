@@ -11,10 +11,12 @@ const Home = () => {
             alt=""
           />
         </div>
+
         <div className="right">
           <div className="heading">
             <h2>Log In</h2>
           </div>
+
           <form>
             <TextField className="inputField" variant="filled" label="Email" />
             <TextField
