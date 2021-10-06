@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar'
+import Login from './Pages/Login/Login'
 import Home from './Pages/Home/Home'
 
 const App = () => {
@@ -8,7 +9,10 @@ const App = () => {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route exact path="/home">
             <Home />
           </Route>
         </Switch>
