@@ -1,19 +1,30 @@
 import './Home.scss'
-import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div className="home">
-      <h1>First Time Setup</h1>
+      {/* <h1>First Time Setup</h1> */}
       <div className="buttons">
-        <Link to="/risktables" className="btnRiskRatingTables" style={{ textDecoration: 'none' }}>
-          <Button variant="contained">Risk Rating Tables</Button>
+        <Link to="/risktables" className="btnRiskRatingTables">
+          <span class="text">Risk Rating Tables</span>
+          <span class="line -right"></span>
+          <span class="line -top"></span>
+          <span class="line -left"></span>
+          <span class="line -bottom"></span>
         </Link>
-        <Link to="/irasettings" classname="btnIRASettings" style={{ textDecoration: 'none' }}>
-          <Button variant="contained">Inherent Risk Assessment</Button>
+        <Link to="/irasettings" classname="btnIRASettings">
+          <span class="text">Inherent Risk Assessment</span>
+          <span class="line -right"></span>
+          <span class="line -top"></span>
+          <span class="line -left"></span>
+          <span class="line -bottom"></span>
         </Link>
-        <Link to="/casettings" classname="btnCASettings" style={{ textDecoration: 'none' }}>
-          <Button variant="contained">Control Assessment</Button>
+        <Link to="/casettings" classname="btnCASettings">
+          <span class="text">Control Assessment</span>
+          <span class="line -right"></span>
+          <span class="line -top"></span>
+          <span class="line -left"></span>
+          <span class="line -bottom"></span>
         </Link>
       </div>
     </div>
