@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div className="home">
-      {/* <h1>First Time Setup</h1> */}
-      <div className="buttons">
+      <h1>First Time Setup</h1>
+      <div className="menu">
         <Link to="/risktables" className="btnRiskRatingTables">
           <span class="text">Risk Rating Tables</span>
           <span class="line -right"></span>
