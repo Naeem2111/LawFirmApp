@@ -1,12 +1,14 @@
 import './Risktables.scss'
 import { Link } from 'react-router-dom'
-
+import { Grid } from '@mui/material'
 const Risktables = () => {
   return (
     <div className="risktables">
       <h1>risktables</h1>
-      <div className="container">
-        <div className="menu">
+      <Grid container>
+        <Grid item xs={2}>
+          </Grid>
+        <Grid item xs={4}>
           <Link to="/risktables" className="btnRiskRatingTables">
             <span class="text">Country</span>
             <span class="line -right"></span>
@@ -42,9 +44,11 @@ const Risktables = () => {
             <span class="line -left"></span>
             <span class="line -bottom"></span>
           </Link>
-        </div>
-        <div className="table">Select Table</div>
-      </div>
+        </Grid>
+        <Grid item xs={6}>
+          <div className="table">Select Table</div>
+        </Grid>
+      </Grid>
     </div>
   )
 }
