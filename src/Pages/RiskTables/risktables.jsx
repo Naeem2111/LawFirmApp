@@ -6,8 +6,7 @@ const Risktables = () => {
     <div className="risktables">
       <h1>risktables</h1>
       <Grid container>
-        <Grid item xs={2}>
-          </Grid>
+        <Grid item xs={2}></Grid>
         <Grid item xs={4}>
           <Link to="/risktables" className="btnRiskRatingTables">
             <span class="text">Country</span>
