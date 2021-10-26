@@ -1,6 +1,7 @@
 import './Risktables.scss'
 import { Link } from 'react-router-dom'
 import { Grid } from '@mui/material'
+import countriesObjects from '../../Data/countries'
 const Risktables = () => {
   return (
     <div className="risktables">

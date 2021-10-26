@@ -227,4 +227,14 @@ const countries = [
   [185, 'Zimbabwe', 3, 'High', 56.06]
 ]
 
-export default countries
+const countriesObjects = countries.map(
+  ([
+    countryRanking,
+    countryDescription,
+    riskRating,
+    riskLevel,
+    vendorRiskScore
+  ]) => ({ countryRanking, countryDescription, riskRating, riskLevel, vendorRiskScore })
+)
+
+export default countriesObjects
