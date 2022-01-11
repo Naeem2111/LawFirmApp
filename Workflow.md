@@ -3,14 +3,14 @@
 ## Table of Contents
 
 - Make account
-- First time setup (Admin)
+- First time setup (Admin) | 1 week
   - RRT
   - IRA
   - CA
-- Client setup (Admin)
+- Client setup (Admin) | 1 week
   - Client Info & BUs
   - BU Allocation
-- Assess BU
+- Assess BU | 1 week
   - BU Selection
   - IRA & CA Catergories
   - Questions
@@ -19,7 +19,7 @@
 
 This will be handled by either us or an admin
 
-## First time setup (Admin)
+## First time setup (Admin) | 1 week
 
 On first time login, the workflow is as follows:
 
@@ -46,7 +46,7 @@ Present prefilled categories, with optional editing, and allow sub-category and 
 
 Present prefilled categories, with optional editing, and allow sub-category and question modification (just deletion for now).
 
-## Client Setup (Admin)
+## Client Setup (Admin) | 1 week
 
 This will be the procedure to add a new client into the system.
 
@@ -59,7 +59,7 @@ Thereafter, fills in the Business Unit weight allocation.
 
 Admin assigns the different BUs to different groups of assessors. (System to be determined).
 
-## Assess BU
+## Assess BU | 1 week
 
 ### BU Selection
 
