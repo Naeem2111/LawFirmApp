@@ -1,0 +1,18 @@
+$thick: 3px;
+$pad: 0.7em;
+$extra: calc(#{$pad} * 1.2);
+$color: #149887;
+
+.caSettings {
+  background: white;
+  display: flex;
+  min-height: 15vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  h1 {
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+}

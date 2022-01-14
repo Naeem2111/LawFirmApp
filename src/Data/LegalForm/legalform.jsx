@@ -1,38 +1,76 @@
-import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
+import { useState } from 'react'
+import { DataGrid } from '@mui/x-data-grid'
+import { Button, Box } from '@mui/material'
+import legal from './legal.jsx'
 
-import legal from './legal.jsx';
-const LegalForm = () => {
-
-    const columns = [
-        // { field: 'countryRanking', headerName: 'Country Ranking', width: 180, type: 'number', editable: true },
-        { field: 'OccupationDescription', headerName: 'Occupation Description', type: 'text', editable: true,  width: 300, },
-        {
-          field: 'riskRating',
-          headerName: 'Risk Rating',
-          type: 'number',
-          width: 180,
-          editable: true,
-        },
-        {
-          field: 'riskLevel',
-          headerName: 'Risk Level',
-          type: 'text',
-          width: 220,
-          editable: true,
-        },
-
-      ];
-      
-      const rows = legal;
-
-    return (
-        
-      <div style={{ height: 450, width: 900 }}>
-        <DataGrid rows={rows} columns={columns}  />
-      </div>
-    );
+const columns = [
+  // { field: 'countryRanking', headerName: 'Country Ranking', width: 180, type: 'number', editable: true },
+  {
+    field: 'OccupationDescription',
+    headerName: 'Occupation Description',
+    editable: true,
+    width: 300
+  },
+  {
+    field: 'riskRating',
+    headerName: 'Risk Rating',
+    type: 'number',
+    width: 180,
+    editable: true
+  },
+  {
+    field: 'riskLevel',
+    headerName: 'Risk Level',
+    width: 220,
+    editable: true
   }
- 
-  
-export default LegalForm;
+]
+
+const LegalForm = () => {
+  const [rows, setRows] = useState(legal)
+  const [selectedIDs, setSelectedIDs] = useState([])
+
+  const handleDeleteRow = () => {
+    const newRows = [...rows]
+    const filteredRows = newRows.filter(
+      (element) => !selectedIDs.includes(element.id)
+    )
+    //https://issueexplorer.com/issue/mui-org/material-ui-x/2714
+    setTimeout(() => setRows(filteredRows))
+
+    console.log(selectedIDs)
+  }
+
+  const handleAddRow = () => {
+    const newRows = [...rows]
+
+    newRows.push({
+      id: Object.keys(newRows).length + 1,
+      OccupationDescription: 'LegalForm',
+      riskRating: 1,
+      riskLevel: 'Low'
+    })
+    setRows(newRows)
+  }
+  return (
+    <div style={{ height: 450, width: 900 }}>
+      <Box sx={{ height: 50 }}>
+        <Button size="small" onClick={handleDeleteRow}>
+          Delete selected
+        </Button>
+        <Button size="small" onClick={handleAddRow}>
+          Add a row
+        </Button>
+      </Box>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        checkboxSelection
+        selectionModel={selectedIDs}
+        onSelectionModelChange={setSelectedIDs}
+      />
+    </div>
+  )
+}
+
+export default LegalForm
