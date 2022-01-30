@@ -1,3 +1,4 @@
 :root {
   --navbar-height: 7vh;
+  --screen-height: calc(100vh - var(--navbar-height));
 }
