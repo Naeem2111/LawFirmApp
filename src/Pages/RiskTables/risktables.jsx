@@ -1,6 +1,6 @@
 import './Risktables.scss'
 //import { Grid } from '@mui/material'
-import { useState } from 'react'
+import { React, useState } from 'react'
 import Tablist from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import TabPanel from '@mui/lab/TabPanel'
@@ -21,7 +21,7 @@ const Risktables = () => {
   }
   return (
     <div className="risktables">
-      <h1>Risk Factors</h1>
+      n<h1>Risk Factors</h1>
       <TabContext value={tabListValue}>
         <Tablist value={tabListValue} onChange={handleChange}>
           <Tab label="Country" value="Country" />
@@ -50,7 +50,6 @@ const Risktables = () => {
           <ProductType />
         </TabPanel>
       </TabContext>
-
       <Button component={RouterLink} to="/home">
         Return to Settings
       </Button>

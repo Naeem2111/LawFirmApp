@@ -1,0 +1,21 @@
+@import '../../../Styles/global.scss';
+
+.risk {
+  height: var(--screen-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .risk-options {
+    display: flex;
+    margin: 1%;
+    height: 10vh;
+    width: 30vw;
+
+    .risk-btn {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
