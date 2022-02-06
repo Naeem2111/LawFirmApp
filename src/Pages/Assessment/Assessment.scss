@@ -1,0 +1,46 @@
+$thick: 3px;
+$pad: 0.7em;
+$extra: calc(#{$pad} * 1.2);
+$color: #149887;
+
+.assessment {
+  background: white;
+  text-align: center;
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  .menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  h1 {
+    margin-bottom: 14vh;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    padding: $pad $extra;
+    display: block;
+    border: $thick solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+    position: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 5vh;
+  }
+
+  .risk-btn {
+    height: 100%;
+    width: 100%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+  }
+}
