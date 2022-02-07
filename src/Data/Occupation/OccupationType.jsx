@@ -2,12 +2,8 @@ import { useState, useEffect } from 'react'
 import { Button, Box } from '@mui/material'
 import occupation from './occupation'
 
-import { DataGrid } from '@mui/x-data-grid'
-import QuickSearchToolbar from '../../Components/QuickSearchToolbar/QuickSearchToolbar'
+import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 
-function escapeRegExp(value) {
-  return value.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
-}
 const columns = [
   //  {
   //     id: 1,
@@ -40,7 +36,6 @@ const columns = [
 
 const OccupationType = () => {
   const [rows, setRows] = useState(occupation)
-  const [searchText, setSearchText] = useState('')
   const [selectedIDs, setSelectedIDs] = useState([])
 
   const handleDeleteRow = () => {
@@ -69,17 +64,6 @@ const OccupationType = () => {
     setRows(newRows)
   }
 
-  const requestSearch = (searchValue) => {
-    setSearchText(searchValue)
-    const searchRegex = new RegExp(escapeRegExp(searchValue), 'i')
-    const filteredRows = rows.filter((row) => {
-      return Object.keys(rows).some((field) => {
-        return searchRegex.test(rows[field].toString())
-      })
-    })
-    setRows(filteredRows)
-  }
-
   useEffect(() => {
     setRows(rows)
   }, [rows])
@@ -96,19 +80,12 @@ const OccupationType = () => {
       </Box>
       <Box sx={{ height: 400 }}>
         <DataGrid
-          components={{ Toolbar: QuickSearchToolbar }}
+          components={{ Toolbar: GridToolbar }}
           rows={rows}
           columns={columns}
           checkboxSelection
           selectionModel={selectedIDs}
           onSelectionModelChange={setSelectedIDs}
-          componentsProps={{
-            toolbar: {
-              value: searchText,
-              onChange: (event) => requestSearch(event.target.value),
-              clearSearch: () => requestSearch('')
-            }
-          }}
         />
       </Box>
     </div>

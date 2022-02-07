@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { DataGrid } from '@mui/x-data-grid'
+import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import { Button, Box } from '@mui/material'
 import legal from './legal.jsx'
 
@@ -63,6 +63,7 @@ const LegalForm = () => {
         </Button>
       </Box>
       <DataGrid
+        components={{ Toolbar: GridToolbar }}
         rows={rows}
         columns={columns}
         checkboxSelection

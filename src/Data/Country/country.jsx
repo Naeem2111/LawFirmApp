@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { DataGrid } from '@mui/x-data-grid'
+import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import countries from './countries2'
 const Country = () => {
   const columns = [
@@ -39,6 +39,7 @@ const Country = () => {
   return (
     <div style={{ height: 600, width: 900 }}>
       <DataGrid
+        components={{ Toolbar: GridToolbar }}
         rows={rows}
         columns={columns}
         id={(row) => row.countryRanking}

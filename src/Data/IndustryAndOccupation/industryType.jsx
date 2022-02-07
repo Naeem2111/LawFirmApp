@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { DataGrid } from '@mui/x-data-grid'
+import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import industry from './industry.jsx'
 import { Button, Box } from '@mui/material'
 
@@ -64,6 +64,7 @@ const IndustryType = () => {
         </Button>
       </Box>
       <DataGrid
+        components={{ Toolbar: GridToolbar }}
         rows={rows}
         columns={columns}
         checkboxSelection

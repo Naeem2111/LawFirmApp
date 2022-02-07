@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { DataGrid } from '@mui/x-data-grid'
+import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import { Button, Box } from '@mui/material'
 import customer from './customer.js'
 
@@ -66,6 +66,7 @@ const CustomerType = () => {
       </Box>
       <Box sx={{ height: 400 }}>
         <DataGrid
+          components={{ Toolbar: GridToolbar }}
           rows={rows}
           columns={columns}
           id={rows.id}
