@@ -21,7 +21,7 @@ const Risktables = () => {
   }
   return (
     <div className="risktables">
-      n<h1>Risk Factors</h1>
+      <h1>Risk Factors</h1>
       <TabContext value={tabListValue}>
         <Tablist value={tabListValue} onChange={handleChange}>
           <Tab label="Country" value="Country" />

@@ -22,7 +22,7 @@ const Home = () => {
               variant="filled"
               label="Password"
             />
-            <Link to="/home" className="btnLogin">
+            <Link to="/assessment" className="btnLogin">
               <Button variant="outlined">Log In</Button>
             </Link>
           </form>
