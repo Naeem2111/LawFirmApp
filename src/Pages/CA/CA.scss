@@ -1,0 +1,27 @@
+@import '../../Styles/global.scss';
+
+.ca {
+  height: var(--screen-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .ca-options {
+    display: flex;
+    margin: 1%;
+    height: 8vh;
+    width: 30vw;
+
+    .option-link {
+      height: inherit;
+      width: inherit;
+      text-decoration: none;
+
+      .ca-btn {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

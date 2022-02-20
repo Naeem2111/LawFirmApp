@@ -8,6 +8,8 @@ import CustomerRisk from './Pages/IRA/CustomerRisk/CustomerRisk'
 import Assessment from './Pages/Assessment/Assessment'
 import Products from './Pages/IRA/Products/Products'
 import Regulatory from './Pages/IRA/Regulatory/Regulatory'
+import CA from './Pages/CA/CA'
+import Diligence from './Pages/CA/Diligence/Diligence'
 
 const App = () => {
   return (
@@ -23,6 +25,12 @@ const App = () => {
           </Route>
           <Route exact path="/risktables">
             <Risktables />
+          </Route>
+          <Route exact path="/casettings">
+            <CA />
+          </Route>
+          <Route exact path="/casettings/due-diligence">
+            <Diligence />
           </Route>
           <Route exact path="/irasettings">
             <IRA />
