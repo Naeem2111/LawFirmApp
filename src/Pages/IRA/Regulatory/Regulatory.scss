@@ -1,0 +1,21 @@
+@import '../../../Styles/global.scss';
+
+.regulatory {
+  height: var(--screen-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .regulatory-options {
+    display: flex;
+    margin: 1%;
+    height: 10vh;
+    width: 30vw;
+
+    .regulatory-btn {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

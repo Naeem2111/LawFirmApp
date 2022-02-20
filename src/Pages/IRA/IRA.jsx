@@ -16,7 +16,7 @@ const IRA = () => {
   return (
     <div className="ira">
       <div className="ira-options">
-        <Link to="/customer-risk" className="option-link">
+        <Link to="/irasettings/customer-risk" className="option-link">
           <Button variant="outlined" className="ira-btn">
             Customer Risk
           </Button>
@@ -26,7 +26,7 @@ const IRA = () => {
         </Button>
       </div>
       <div className="ira-options">
-        <Link to="/" className="option-link">
+        <Link to="#" className="option-link">
           <Button variant="outlined" className="ira-btn">
             Channels / Route to Market
           </Button>
@@ -36,7 +36,7 @@ const IRA = () => {
         </Button>
       </div>
       <div className="ira-options">
-        <Link to="/" className="option-link">
+        <Link to="/irasettings/products-services" className="option-link">
           <Button variant="outlined" className="ira-btn">
             Products and Services
           </Button>
@@ -46,7 +46,7 @@ const IRA = () => {
         </Button>
       </div>
       <div className="ira-options">
-        <Link to="/" className="option-link">
+        <Link to="#" className="option-link">
           <Button variant="outlined" className="ira-btn">
             Geography
           </Button>
@@ -56,7 +56,7 @@ const IRA = () => {
         </Button>
       </div>
       <div className="ira-options">
-        <Link to="/" className="option-link">
+        <Link to="/irasettings/regulatory" className="option-link">
           <Button variant="outlined" className="ira-btn">
             Regulatory and Other
           </Button>
